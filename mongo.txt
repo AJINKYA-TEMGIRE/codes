@@ -1,0 +1,19 @@
+use ajinkya
+
+db.createCollection("marks")
+
+db.ajinkya.marks.insertOne({Name : "Ajinkya" , Marks : 56})
+
+db.ajinkya.marks.insertMany([{Name : "Sakshi" , Marks : 100} , {Name : "Arpita"}])
+
+db.ajinkya.marks.find()
+
+db.ajinkya.marks.find({Name : "Ajinkya"})
+
+db.ajinkya.marks.updateOne({Name : "Ajinkya"} , {$set : {Marks : 35}})
+
+db.ajinkya.marks.find({} , {_id : 0})
+
+db.ajinkya.marks.deleteOne({Name : "Ajinkya"})
+
+db.ajinkya.marks.find({} , {_id : 0})
